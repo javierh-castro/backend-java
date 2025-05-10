@@ -1,3 +1,5 @@
+import com.aluracursos.screenmatch.modelos.Pelicula;
+
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
@@ -9,16 +11,22 @@ public class Principal {
 
         miPelicula.evalua(6);//EStoy llamando la funcion
         miPelicula.evalua(7);
-        System.out.println(miPelicula.sumaDeLasEvaluaciones);
-        System.out.println(miPelicula.totalDeLasEvaluaciones);
+//        System.out.println(miPelicula.totalDeLasEvaluaciones);//Ya no podemos llamar eso porque es privado
+        System.out.println("esto es: " + miPelicula.getTotalDeLasEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.nombre = "Matrix";
-        otraPelicula.fechaDeLanzamiento = 2004;
-        otraPelicula.duracionEnMinutos = 180;
 
-        System.out.println("Mi pelicula es: " + otraPelicula.nombre);
-        System.out.println("Su fecha de lanzamiento es: " + otraPelicula.fechaDeLanzamiento);
+
+
+
+
+
+//        com.aluracursos.screenmatch.modelos.Pelicula otraPelicula = new com.aluracursos.screenmatch.modelos.Pelicula();
+//        otraPelicula.nombre = "Matrix";
+//        otraPelicula.fechaDeLanzamiento = 2004;
+//        otraPelicula.duracionEnMinutos = 180;
+//
+//        System.out.println("Mi pelicula es: " + otraPelicula.nombre);
+//        System.out.println("Su fecha de lanzamiento es: " + otraPelicula.fechaDeLanzamiento);
     }
 }
