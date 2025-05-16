@@ -6,7 +6,23 @@ public class Titulo {
     private int duracionEnMinutos;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
-    private int totalDeLasEvaluaciones;
+    private int totalDelasEvaluaciones;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getFechaDeLanzamiento() {
+        return fechaDeLanzamiento;
+    }
+
+    public int getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+
+    public boolean isIncluidoEnElPlan() {
+        return incluidoEnElPlan;
+    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -24,29 +40,22 @@ public class Titulo {
         this.incluidoEnElPlan = incluidoEnElPlan;
     }
 
-    //Darle el dato al quien le pide
-
-    public int getDuracionEnMinutos() {
-        return duracionEnMinutos;
+    public int getTotalDelasEvaluaciones(){
+        return totalDelasEvaluaciones;
     }
 
-    public int getTotalDeLasEvaluaciones() {
-        return totalDeLasEvaluaciones;
-    }
-
-    public void muestraFichaTecnica() {
+    public void muestraFichaTecnica(){
         System.out.println("El nombre de la película es: " + nombre);
-        System.out.println("Su fecha de lanzamiento es:" + fechaDeLanzamiento);
-        System.out.println("Duración en minutos: " + getDuracionEnMinutos());
+        System.out.println("Su fecha de lanzamiento es: " + fechaDeLanzamiento);
+        System.out.println("Duración en minutos: "+ getDuracionEnMinutos());
     }
 
-    public void evalua(double nota) {//Espera un dato de tipo double
+    public void evalua(double nota){
         sumaDeLasEvaluaciones += nota;
-//     totalDeLasEvaluaciones += 1;
-        totalDeLasEvaluaciones++;
+        totalDelasEvaluaciones++;
     }
 
-    public double calculaMedia() {
-        return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    public double calculaMedia(){
+        return sumaDeLasEvaluaciones / totalDelasEvaluaciones;
     }
 }
